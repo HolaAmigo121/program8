@@ -1,0 +1,21 @@
+nano hosts.ini
+                           [local]
+                           localhost ansible_connection=local
+
+
+
+
+nano setup.yml
+                              
+                           ---
+                            -  name: Basic server setup
+                               hosts: local
+                               become: true
+                               tasks:
+                                -  name: Example task
+                                   debug:
+                                     msg: "hello,Basic setup is done"
+
+
+
+ansible-playbook -i hosts.ini setup.yml --ask-become-pass
