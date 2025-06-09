@@ -1,0 +1,41 @@
+GO TO GITHUB
+SIGN IN
+Email: rjgp1572@gmail.com
+password: RJGPAkrishal980154321
+
+
+
+create a new repository as (prg8)
+
+copy all the command except the last one and run in ubuntu
+
+                                echo "# prgm8" >> README.md
+                                git init
+                                git add README.md
+                                git commit -m "first commit"
+                                git branch -M main
+                                git remote add origin https://github.com/HolaAmigo121/prgm8.git
+
+
+
+git add .
+
+git commit -m "first commit=myapp"
+
+
+git push -u origin main
+
+
+                                     Username for 'https://github.com': HolaAmigo121
+                                     Password for 'https://HolaAmigo121@github.com':
+
+
+you can generate password by
+
+Goto GitHub and goto settings > goto developer settings > personal access tokens  >  Token classic  > generate new token(classic)
+
+name: program8
+
+select repo
+
+now generate token and copy the generated password  and paste it to Password for 'https://HolaAmigo121@github.com':(here)
