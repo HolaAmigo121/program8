@@ -1,0 +1,65 @@
+SIGNIN TO JENKINS
+USERNAME: rajagupta121
+password: asdfghjkl12345
+
+
+goto manage Jenkins > tools
+
+in jdk installation
+
+      Name: jdk-21
+      JAVA_HOME: c:\program files\java\jdk-21(but copy the path from system)
+
+in git 
+
+ name: Default
+ path to git executable: git.exe
+ check install automatically
+
+
+in maven installation
+
+Name: Maven 3.9.9
+MAVEN_HOME : c:\program files\apache-maven-3.9.9
+check install automatically
+
+
+goto manage Jenkins 
+
+install plugins
+ 
+1.git plugins
+2.pipeline plugins
+3.maven integration plugins
+4.SSH agent plugins
+
+
+create new item (prg8)
+click freestyle project
+
+
+select git 
+copy repository url from 'git repository'
+change \*master to \*main
+
+in build setup
+
+click add build steps
+select invoke top-level maven targets
+   maven version: maven-3.9.9
+   goal: clean package
+
+again,click add build steps
+select execute shell
+                       ansible-playbook -i hosts.ini setup.yml
+
+Build now
+ //give error 
+
+goto got repository 
+go to setup.yml
+change to become: false
+commit changes
+
+build now
+//success
